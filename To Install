@@ -40,4 +40,4 @@ echo ""                                                               >> $repoFi
 
 chmod +x $repoFile
 
-#reboot
+reboot
