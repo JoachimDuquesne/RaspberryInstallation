@@ -1,15 +1,43 @@
-To install on a RaspberryPi for Escape Rush fresh 
-Raspbian-full 
-add EscapeRush user with sudo group 
-remove user pi
+# To install on a RaspberryPi for Escape Rush fresh 
+# Burn Raspbian image 
+# in raspi-config : boot into CLI, no login
+#                   activate ssh
+#                   change location settings
+#                   change keyboard layout
+#                   change timezone
+#                   change memory split
+#                   
+# Add 'EscapeRush' user 
+# Execute this script with sudo rights
 
-raspi-config : - boot into cli, no login
-               - activate ssh
+
+usermod -aG adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
 
 aptitude update && full-upgrade 
-install : omxplayer 
-          arduino
-          screen
-          
-library : wiringPi
-          libpam-systemd
+aptitude install omxplayer arduino screen wiringPi libpam-systemd
+
+deluser pi
+
+# Write configGitRepo.sh to the home directory
+
+repoFile=/home/EscapeRush/configGitRepo.sh
+echo > $repoFile
+echo #!/bin/bash                                                      >> $repoFile
+echo ""                                                               >> $repoFile
+echo # Verify that the user is EscapeRush for file tree consistancy   >> $repoFile
+echo "if [ $USER != 'EscapeRush' ] ; then"                            >> $repoFile
+echo "    echo Error: User is not \'EscapeRush\'"                     >> $repoFile
+echo "    exit"                                                       >> $repoFile
+echo "fi"                                                             >> $repoFile
+echo ""                                                               >> $repoFile
+echo git config --global user.name EscapeRush                         >> $repoFile
+echo git config --global user.email vincent@escaperush.com            >> $repoFile
+echo ""                                                               >> $repoFile
+echo read -p \"Enter repo to be configured :\" repo                   >> $repoFile
+echo ""                                                               >> $repoFile
+echo "git clone \"https://github.com/EscapeRush/\$repo.git\""         >> $repoFile
+echo ""                                                               >> $repoFile
+
+chmod +x $repoFile
+
+#reboot
