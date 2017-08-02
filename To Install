@@ -9,7 +9,11 @@
 #                   
 # Add 'EscapeRush' user 
 # Execute this script with sudo rights
-
+# edit /etc/kbd/config : BLANK_TIME=0 (instead of 30, the default value)
+# 
+# edit /boot/cmdline.txt : add logo.nologo at the end
+#
+# execute the cmd below
 
 usermod -aG adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
 
@@ -17,6 +21,8 @@ aptitude update && full-upgrade
 aptitude install omxplayer arduino screen wiringPi libpam-systemd
 
 deluser pi
+rm -r /home/pi 
+
 
 # Write configGitRepo.sh to the home directory
 
