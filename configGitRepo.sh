@@ -8,6 +8,7 @@ fi
 
 git config --global user.name EscapeRush
 git config --global user.email vincent@escaperush.com
+git config --global push.default simple
 
 read -p "Enter repo to be configured :" repo
 
