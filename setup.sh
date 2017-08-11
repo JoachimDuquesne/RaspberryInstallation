@@ -1,6 +1,10 @@
 #!/bin/bash
 # To install on a RaspberryPi for Escape Rush fresh 
-# Burn Raspbian image 
+# Burn Raspbian image
+# run : git clone  https://github.com/EscapeRush/RaspberryInstallation.git
+# then cd RaspberryInstallation
+#      chmod +x setup.sh
+#
 # in raspi-config : boot into CLI, no login
 #                   change hostname
 #                   activate ssh
@@ -15,7 +19,7 @@
 # 
 # edit with nano /boot/cmdline.txt : add logo.nologo at the end
 #
-# execute the cmd below
+# execute the cmd below by executing : sudo ./setup.sh
 
 useradd -m -G adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
 passwd EscapeRush
