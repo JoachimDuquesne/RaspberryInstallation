@@ -7,7 +7,7 @@
 #                   change timezone
 #                   change memory split
 #                   
-# Add 'EscapeRush' user 
+# 
 # Execute this script with sudo rights
 # edit /etc/kbd/config : BLANK_TIME=0 (instead of 30, the default value)
 # 
@@ -15,10 +15,12 @@
 #
 # execute the cmd below
 
-usermod -aG adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
+useradd -m -G adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
+passwd EscapeRush
+#usermod -aG adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
 
 aptitude update && full-upgrade 
-aptitude install omxplayer arduino screen wiringPi libpam-systemd
+aptitude install omxplayer arduino screen wiringPi libpam-systemd arduino python-serial
 
 deluser pi
 rm -r /home/pi 
