@@ -1,6 +1,8 @@
+#!/bin/bash
 # To install on a RaspberryPi for Escape Rush fresh 
 # Burn Raspbian image 
 # in raspi-config : boot into CLI, no login
+#                   change hostname
 #                   activate ssh
 #                   change location settings
 #                   change keyboard layout
@@ -9,9 +11,9 @@
 #                   
 # 
 # Execute this script with sudo rights
-# edit /etc/kbd/config : BLANK_TIME=0 (instead of 30, the default value)
+# edit with nano /etc/kbd/config : BLANK_TIME=0 (instead of 30, the default value)
 # 
-# edit /boot/cmdline.txt : add logo.nologo at the end
+# edit with nano /boot/cmdline.txt : add logo.nologo at the end
 #
 # execute the cmd below
 
