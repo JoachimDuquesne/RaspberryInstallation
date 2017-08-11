@@ -25,7 +25,7 @@ useradd -m -G adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,s
 passwd EscapeRush
 #usermod -aG adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
 
-aptitude update && full-upgrade 
+aptitude update && aptitude full-upgrade 
 aptitude install omxplayer arduino screen wiringPi libpam-systemd arduino python-serial telnet
 
 deluser pi
