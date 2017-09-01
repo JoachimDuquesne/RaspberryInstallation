@@ -11,7 +11,7 @@
 #                   change memory split
 #                   
 # 
-# Execute this script with sudo rights
+# 
 # edit with nano /etc/kbd/config : BLANK_TIME=0 (instead of 30, the default value)
 # 
 # edit with nano /boot/cmdline.txt : add logo.nologo at the end
@@ -26,13 +26,15 @@
 # execute the cmd below by executing : sudo ./setup.sh
 
 useradd -m -G adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
-passwd EscapeRush
+passwd -e EscapeRush
 #usermod -aG adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
 
-aptitude update && aptitude full-upgrade 
-aptitude install omxplayer arduino screen wiringPi libpam-systemd arduino python-serial telnet
+cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+cp interface /etc/network/interface
 
-deluser pi
-rm -r /home/pi 
+aptitude update && aptitude full-upgrade 
+aptitude install -y -r omxplayer arduino screen wiringPi libpam-systemd python-serial telnet mosquitto mosquitto-clients
+
+userdel -f -r pi
 
 reboot
