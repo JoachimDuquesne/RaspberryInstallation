@@ -26,7 +26,7 @@
 # execute the cmd below by executing : sudo ./setup.sh
 
 useradd -m -G adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
-passwd -e EscapeRush
+#passwd -e EscapeRush
 #usermod -aG adm,dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi EscapeRush
 
 cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
