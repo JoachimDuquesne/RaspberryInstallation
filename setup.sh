@@ -24,7 +24,6 @@
 #      chmod +x setup.sh
 #
 # execute the cmd below by executing : sudo ./setup.sh
-echo $#
 
 if [ $# -ne 1 ]; then
     echo "Usage : sudo ./setup.sh USERNAME"
@@ -43,4 +42,4 @@ cp interfaces /etc/network/interfaces
 
 userdel -f -r pi
 
-#reboot
+reboot
