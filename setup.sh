@@ -31,7 +31,7 @@ if [ $# -ne 1 ]; then
 fi
 
 aptitude update && aptitude full-upgrade
-aptitude install -y -r omxplayer arduino screen wiringPi libpam-systemd python-serial telnet mosquitto mosquitto-clients qt5-default
+aptitude install -y -r omxplayer arduino screen wiringPi libpam-systemd python-serial telnet mosquitto mosquitto-clients libmosquitto-dev qt5-default
 
 useradd -m -G adm,dialout,systemd-journal,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi,www-data $1
 echo "$1:raspberry" | chpasswd     # Setup default password
