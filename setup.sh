@@ -40,6 +40,6 @@ passwd -e $1    # Force new password at first login
 cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 cp interfaces /etc/network/interfaces
 
-userdel -f -r pi
+#userdel -f -r pi
 
 reboot
