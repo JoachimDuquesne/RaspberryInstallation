@@ -27,4 +27,4 @@
 # execute the cmd below by executing : sudo ./setup.sh
 
 aptitude update && aptitude full-upgrade
-aptitude install -y -r omxplayer arduino screen wiringPi libpam-systemd python-serial telnet mosquitto mosquitto-clients libmosquitto-dev qt5-default libpcre++-dev libboost-dev libdbus-1-dev 
+aptitude install -y -r omxplayer arduino screen wiringPi libpam-systemd python-serial telnet mosquitto mosquitto-clients libmosquitto-dev libmosquittopp-dev qt5-default libpcre++-dev libboost-dev libdbus-1-dev 
