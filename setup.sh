@@ -19,12 +19,8 @@
 #
 # edit with nano /boot/config.txt : uncomment disableoverscan=1 and set overscan values to 0 (uncommented)
 #
-# Install Git : sudo apt-get install git
-# run : git clone  https://github.com/EscapeRush/RaspberryInstallation.git
-# then cd RaspberryInstallation
-#      chmod +x setup.sh
+# edit with nano /etc/lightdm/lightdm.conf to enable autologin in gui
 #
-# execute the cmd below by executing : sudo ./setup.sh
 
 aptitude update && aptitude full-upgrade
-aptitude install -y -r omxplayer arduino screen wiringPi libpam-systemd libasound2-dev python-serial telnet mosquitto mosquitto-clients libmosquitto-dev libmosquittopp-dev qt5-default libpcre++-dev libboost-dev libdbus-1-dev libjpeg8-dev
+aptitude install -y -r git omxplayer arduino screen wiringPi libpam-systemd libasound2-dev python-serial telnet mosquitto mosquitto-clients libmosquitto-dev libmosquittopp-dev qt5-default libpcre++-dev libboost-dev libdbus-1-dev libjpeg8-dev
