@@ -23,4 +23,4 @@
 #
 
 aptitude update && aptitude full-upgrade
-aptitude install -y -r git omxplayer arduino screen wiringPi libpam-systemd libasound2-dev python-serial telnet mosquitto mosquitto-clients libmosquitto-dev libmosquittopp-dev qt5-default libpcre++-dev libboost-dev libdbus-1-dev libjpeg8-dev
+aptitude install -y -r git omxplayer arduino arduino-mk screen wiringPi libpam-systemd libasound2-dev python-serial telnet mosquitto mosquitto-clients libmosquitto-dev libmosquittopp-dev qt5-default libpcre++-dev libboost-dev libdbus-1-dev libjpeg8-dev
