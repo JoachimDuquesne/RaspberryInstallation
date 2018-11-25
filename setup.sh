@@ -24,3 +24,7 @@
 
 aptitude update && aptitude full-upgrade
 aptitude install -y -r git omxplayer arduino arduino-mk screen wiringPi libpam-systemd libasound2-dev python-serial telnet mosquitto mosquitto-clients libmosquitto-dev libmosquittopp-dev qt5-default libpcre++-dev libboost-dev libdbus-1-dev libjpeg8-dev
+
+# if auto reconnect to wifi required, uncomment the following line : (this assume wpa_supplicant.conf and dhcpcd.conf correctly configured)
+# cp /etc/wpa_supplicant/ifupdown.sh /etc/ifplugd/action.d/ifupdown
+# it could not work on RPI3 (to test) 
