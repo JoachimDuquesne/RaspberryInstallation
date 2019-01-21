@@ -15,10 +15,4 @@
 - rm -f /home/pi
 - raspi-config camera on
 - aptitude update && aptitude full-upgrade
-- wget https://github.com/Motion-Project/motion/releases/download/release-4.2/pi_stretch_motion_4.2-1_armhf.deb
-- dpkg -i pi_stretch_motion_4.2-1_armhf.deb   (It should failed due but will be fixed by next aptitude install)
-- aptitude install -r git screen (with recommends)
-- configure /etc/motion/motion.conf (daemon, target dir, image size, min motion frame, pre/post capture, picture on, movie off, webcont local off, webstream local off)
-- configure /etc/default/motion daemon yes
-- mkdire /home/USER/motion
-- chown group motion, chmod 775
+
