@@ -13,6 +13,7 @@
 - Logout of Pi and login in NEWUSER
 - deluser pi
 - rm -f /home/pi
+- echo "Acquire::ForceIPv4 "true";" | sudo tee /etc/apt/apt.conf.d/99force-ipv4
 - aptitude update 
 - aptitude install -y -r screen git 
 - aptitude full-upgrade
