@@ -9,10 +9,10 @@
 ### After first boot
 - Login in ssh with pi@NEWHOSTNAME.local
 - adduser *USER
-- usermod -aG sudo,*** NEWUSER
+- usermod -aG dialout,sudo,audio,video,plugdev,users,input,netdev,gpio,i2c,spi NEWUSER
 - Logout of Pi and login in NEWUSER
 - deluser pi
 - rm -f /home/pi
-- raspi-config camera on
-- aptitude update && aptitude full-upgrade
-
+- aptitude update 
+- aptitude install -y -r screen git 
+- aptitude full-upgrade
