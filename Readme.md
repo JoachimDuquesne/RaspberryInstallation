@@ -17,3 +17,6 @@
 - aptitude update 
 - aptitude install -y -r screen git 
 - aptitude full-upgrade
+
+### MySensors gateways
+- ./configure --my-transport=rf24 --my-gateway=mqtt --my-controller-ip-address=127.0.0.1 --my-mqtt-publish-topic-prefix=mysensors-out --my-mqtt-subscribe-topic-prefix=mysensors-in --my-mqtt-client-id=mygateway1 --my-debug=enable
