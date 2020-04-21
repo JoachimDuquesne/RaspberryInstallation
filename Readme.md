@@ -1,6 +1,6 @@
 # Setup
 ### Configure SD Card
-- Burn Strech SD Card
+- Burn Raspbian image on SD Card
 - Add ssh file in 'boot' partition
 - add "wpa_passphrase SSID PASS" output to etc/wpa_supplicant/wpa_supplicant.conf
 - cp /etc/wpa_supplicant/ifupdown.sh /etc/ifplugd/action.d/ifupdown
